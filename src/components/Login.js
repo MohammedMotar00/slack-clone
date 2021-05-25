@@ -17,7 +17,7 @@ function Login() {
           src="https://cdn.mos.cms.futurecdn.net/SDDw7CnuoUGax6x9mTo7dd.jpg"
           alt=""
         />
-        <h1>Sign in to Motars SLACK-clone</h1>
+        <h1>Sign in to Motars SLACK-CLONE</h1>
 
         <Button onClick={signIn}>Sign in with Google</Button>
       </LoginInnerContainer>

@@ -27,7 +27,7 @@ function Sidebar() {
     <SidebarContainer>
       <SidebarHeader>
         <SidebarInfo>
-          <h2>Motar SLACK</h2>
+          <h2>Motars SLACK-CLONE</h2>
           <h3>
             <FiberManualRecordIcon />
             {user.displayName}
