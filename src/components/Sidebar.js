@@ -55,7 +55,7 @@ function Sidebar() {
         </div>
 
         <Footer>
-          <p>This is Slack clone app and will be used just for my portfolio</p>
+          <h3>This is Slack clone app and I will use it for my portfolio</h3>
         </Footer>
       </OptionContainer>
     </SidebarContainer>
@@ -121,7 +121,7 @@ const SidebarInfo = styled.div`
 const Footer = styled.div`
   padding: 20px;
 
-  p {
+  h3 {
     font-weight: 600;
     text-align: center;
     margin-bottom: 25px;
