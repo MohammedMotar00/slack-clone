@@ -35,23 +35,29 @@ function Sidebar() {
         </SidebarInfo>
         <CreateIcon />
       </SidebarHeader>
+      <OptionContainer>
+        <div>
+          <SidebarOption Icon={InserCommentIcon} title="Threads" />
+          <SidebarOption Icon={InboxIcon} title="Mentions & reactions" />
+          <SidebarOption Icon={DraftIcon} title="Saved items" />
+          <SidebarOption Icon={BookmarkBorderIcon} title="Channel browser" />
+          <SidebarOption Icon={PeopleAltIcon} title="People & user groups" />
+          <SidebarOption Icon={AppsIcon} title="Apps" />
+          <SidebarOption Icon={FileCopyIcon} title="File browser" />
+          <SidebarOption Icon={ExpandLessIcon} title="Show less" />
+          <hr />
+          <SidebarOption Icon={ExpandMoreIcon} title="Channels" />
+          <hr />
+          <SidebarOption Icon={AddIcon} title="Add channel" addChannelOption />
+          {channels?.docs.map((doc) => (
+            <SidebarOption key={doc.id} id={doc.id} title={doc.data().name} />
+          ))}
+        </div>
 
-      <SidebarOption Icon={InserCommentIcon} title="Threads" />
-      <SidebarOption Icon={InboxIcon} title="Mentions & reactions" />
-      <SidebarOption Icon={DraftIcon} title="Saved items" />
-      <SidebarOption Icon={BookmarkBorderIcon} title="Channel browser" />
-      <SidebarOption Icon={PeopleAltIcon} title="People & user groups" />
-      <SidebarOption Icon={AppsIcon} title="Apps" />
-      <SidebarOption Icon={FileCopyIcon} title="File browser" />
-      <SidebarOption Icon={ExpandLessIcon} title="Show less" />
-      <hr />
-      <SidebarOption Icon={ExpandMoreIcon} title="Channels" />
-      <hr />
-      <SidebarOption Icon={AddIcon} title="Add channel" addChannelOption />
-
-      {channels?.docs.map((doc) => (
-        <SidebarOption key={doc.id} id={doc.id} title={doc.data().name} />
-      ))}
+        <Footer>
+          <p>This is Slack clone app and will be used just for my portfolio</p>
+        </Footer>
+      </OptionContainer>
     </SidebarContainer>
   );
 }
@@ -64,6 +70,7 @@ const SidebarContainer = styled.div`
   flex: 0.3;
   border-top: 1px solid #49274b;
   margin-top: 60px;
+  overflow-y: auto;
 
   > hr {
     margin-top: 10px;
@@ -109,4 +116,21 @@ const SidebarInfo = styled.div`
     margin-right: 2px;
     color: green;
   }
+`;
+
+const Footer = styled.div`
+  padding: 20px;
+
+  p {
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+`;
+
+const OptionContainer = styled.div`
+  height: calc(100vh - 138px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
